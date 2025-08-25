@@ -14,10 +14,10 @@ interface TaskDao {
     suspend fun insertTask(taskEntity: TaskEntity)
 
     @Query("SELECT * FROM tasks WHERE bsYear = :year AND bsMonth = :month AND bsDay = :day ORDER BY isCompleted")
-    suspend fun getTasksByDate(year: Int, month: Int, day: Int): Flow<List<TaskEntity>>
+    fun getTasksByDate(year: Int, month: Int, day: Int): Flow<List<TaskEntity>>
 
     @Query("SELECT * FROM tasks ORDER BY bsYear, bsMonth, bsDay ASC")
-    suspend fun getAllTasks(): Flow<List<TaskEntity>>
+    fun getAllTasks(): Flow<List<TaskEntity>>
 
     @Update
     suspend fun updateTask(taskEntity: TaskEntity)
