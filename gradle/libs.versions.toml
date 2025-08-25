@@ -1,5 +1,6 @@
 [versions]
 agp = "8.11.1"
+hiltAndroid = "2.57.1"
 kotlin = "2.2.10"
 coreKtx = "1.17.0"
 junit = "4.13.2"
@@ -10,11 +11,14 @@ activityCompose = "1.10.1"
 composeBom = "2025.08.00"
 room = "2.7.2"
 navigationCompose = "2.9.3"
-roomCompiler = "2.5.0"
+roomCompiler = "2.7.2"
+lifecycle_version = "2.9.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-room-compiler-v250 = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -31,8 +35,11 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+
+lifecycle-viewmodel = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle_version" }
+lifecycle-livedata = {group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle_version" }
+lifecycle-compiler = {group = "androidx.lifecycle", name = "lifecycle-compiler", version.ref = "lifecycle_version" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
