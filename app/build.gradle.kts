@@ -66,6 +66,8 @@ dependencies {
     // Room
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
+
+    // Navigation
     implementation(libs.androidx.navigation.compose)
 
     // Lifecycle
