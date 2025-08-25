@@ -8,9 +8,9 @@ data class TaskEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val title: String,
     val description: String? = null,
-    val bsYear: Int, // Bikram Sambat year
-    val bsMonth: Int, // Bikram Sambat month
-    val bsDay: Int, // Bikram Sambat day
+    val bsYear: Int, // bs(Bikram Sambat)
+    val bsMonth: Int,
+    val bsDay: Int,
     val isCompleted: Boolean = false,
     val isCreated: Long = System.currentTimeMillis(),
 )
